@@ -6,17 +6,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Question {
+public class Answer {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   Long id;
-  String question;
+  String answer;
 
-  public Question() {
+  public Answer(String answer) {
+    this.answer = answer;
   }
 
-  public Question(String question) {
-    this.question = question;
+  public Answer() {
   }
 
   public Long getId() {
@@ -27,11 +27,11 @@ public class Question {
     this.id = id;
   }
 
-  public String getQuestion() {
-    return question;
+  public String getAnswer() {
+    return answer;
   }
 
-  public void setQuestion(String question) {
-    this.question = question;
+  public void setAnswer(String answer) {
+    this.answer = answer;
   }
 }
